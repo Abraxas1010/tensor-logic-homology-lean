@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tensor Logic + Homology - 2D Proof Map</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: #0b0f14; color: #e0e0e0; overflow: hidden; }
+    #container { display: flex; height: 100vh; }
+    #sidebar { width: 280px; background: #0f1721; border-right: 1px solid #1c2a3a; padding: 1rem; overflow-y: auto; }
+    #canvas-container { flex: 1; position: relative; }
+    canvas { display: block; }
+    h1 { font-size: 1.1rem; margin-bottom: 0.5rem; color: #fff; }
+    .subtitle { font-size: 0.75rem; color: #8899aa; margin-bottom: 1rem; }
+    input[type="text"] { width: 100%; padding: 0.5rem; background: #1c2a3a; border: 1px solid #2d3f52; border-radius: 4px; color: #fff; margin-bottom: 1rem; }
+    input[type="text"]:focus { outline: none; border-color: #58a6ff; }
+    .legend { margin-top: 1rem; }
+    .legend-item { display: flex; align-items: center; margin: 0.3rem 0; font-size: 0.8rem; }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; margin-right: 0.5rem; }
+    #info { position: absolute; bottom: 1rem; left: 1rem; background: rgba(15,23,33,0.9); padding: 0.75rem; border-radius: 6px; font-size: 0.8rem; max-width: 350px; border: 1px solid #1c2a3a; }
+    #info.hidden { display: none; }
+    .info-name { font-weight: bold; color: #58a6ff; }
+    .info-detail { color: #8899aa; margin-top: 0.25rem; }
+    #stats { font-size: 0.75rem; color: #667788; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="sidebar">
+      <h1>Tensor Logic + Homology</h1>
+      <p class="subtitle">2D Proof Map (UMAP projection)</p>
+      <input type="text" id="search" placeholder="Search declarations...">
+      <div class="legend" id="legend"></div>
+      <div id="stats"></div>
+    </div>
+    <div id="canvas-container">
+      <canvas id="canvas"></canvas>
+      <div id="info" class="hidden"></div>
+    </div>
+  </div>
+
+  <script>
+    const FAMILY_COLORS = {
+      "AST": "hsl(220, 70%, 58%)",
+      "Parser": "hsl(180, 70%, 58%)",
+      "Eval": "hsl(128, 70%, 58%)",
+      "Validate": "hsl(285, 70%, 58%)",
+      "HomologyBridge": "hsl(345, 70%, 58%)",
+      "F2Matrix": "hsl(33, 70%, 58%)",
+      "ChainComplex": "hsl(49, 70%, 58%)",
+      "Regime": "hsl(260, 70%, 58%)",
+      "CLI": "hsl(0, 0%, 70%)",
+      "Tests": "hsl(160, 50%, 50%)",
+      "Core": "hsl(210, 50%, 60%)"
+    };
+
+    let data = null;
+    let canvas, ctx;
+    let scale = 1, offsetX = 0, offsetY = 0;
+    let isDragging = false, lastX, lastY;
+    let hoveredItem = null;
+    let searchTerm = "";
+
+    async function init() {
+      canvas = document.getElementById('canvas');
+      ctx = canvas.getContext('2d');
+
+      // Load data
+      try {
+        const resp = await fetch('tensor_logic_proofs.json');
+        data = await resp.json();
+        document.getElementById('stats').textContent = `${data.items.length} declarations`;
+      } catch (e) {
+        console.error('Failed to load data:', e);
+        return;
+      }
+
+      // Build legend
+      const legend = document.getElementById('legend');
+      for (const [fam, color] of Object.entries(FAMILY_COLORS)) {
+        const count = data.items.filter(d => d.family === fam).length;
+        if (count === 0) continue;
+        const div = document.createElement('div');
+        div.className = 'legend-item';
+        div.innerHTML = `<span class="legend-dot" style="background:${color}"></span>${fam} (${count})`;
+        legend.appendChild(div);
+      }
+
+      resize();
+      window.addEventListener('resize', resize);
+      canvas.addEventListener('wheel', onWheel);
+      canvas.addEventListener('mousedown', onMouseDown);
+      canvas.addEventListener('mousemove', onMouseMove);
+      canvas.addEventListener('mouseup', onMouseUp);
+      canvas.addEventListener('mouseleave', onMouseUp);
+      document.getElementById('search').addEventListener('input', onSearch);
+
+      draw();
+    }
+
+    function resize() {
+      const container = document.getElementById('canvas-container');
+      canvas.width = container.clientWidth;
+      canvas.height = container.clientHeight;
+      draw();
+    }
+
+    function toScreen(x, y) {
+      const cx = canvas.width / 2;
+      const cy = canvas.height / 2;
+      return [cx + (x + offsetX) * scale, cy + (y + offsetY) * scale];
+    }
+
+    function fromScreen(sx, sy) {
+      const cx = canvas.width / 2;
+      const cy = canvas.height / 2;
+      return [(sx - cx) / scale - offsetX, (sy - cy) / scale - offsetY];
+    }
+
+    function draw() {
+      if (!data) return;
+      ctx.fillStyle = '#0b0f14';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const coords = data.coords_2d;
+      const items = data.items;
+
+      // Normalize coords
+      let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+      for (const [x, y] of coords) {
+        minX = Math.min(minX, x); maxX = Math.max(maxX, x);
+        minY = Math.min(minY, y); maxY = Math.max(maxY, y);
+      }
+      const rangeX = maxX - minX || 1;
+      const rangeY = maxY - minY || 1;
+      const baseScale = Math.min(canvas.width, canvas.height) * 0.4;
+
+      // Draw edges (k=5 nearest neighbors approximation)
+      ctx.strokeStyle = 'rgba(59, 75, 93, 0.15)';
+      ctx.lineWidth = 1;
+      for (let i = 0; i < coords.length; i++) {
+        const [x1, y1] = coords[i];
+        const nx1 = (x1 - minX) / rangeX * 2 - 1;
+        const ny1 = (y1 - minY) / rangeY * 2 - 1;
+        const [sx1, sy1] = toScreen(nx1 * baseScale, ny1 * baseScale);
+
+        // Find 3 nearest neighbors for sparse edges
+        const dists = coords.map(([x2, y2], j) => {
+          if (i === j) return Infinity;
+          return Math.hypot(x2 - x1, y2 - y1);
+        });
+        const neighbors = dists.map((d, j) => [d, j]).sort((a, b) => a[0] - b[0]).slice(0, 3);
+
+        for (const [, j] of neighbors) {
+          if (i > j) continue; // Draw each edge once
+          const [x2, y2] = coords[j];
+          const nx2 = (x2 - minX) / rangeX * 2 - 1;
+          const ny2 = (y2 - minY) / rangeY * 2 - 1;
+          const [sx2, sy2] = toScreen(nx2 * baseScale, ny2 * baseScale);
+          ctx.beginPath();
+          ctx.moveTo(sx1, sy1);
+          ctx.lineTo(sx2, sy2);
+          ctx.stroke();
+        }
+      }
+
+      // Draw nodes
+      for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+        const [x, y] = coords[i];
+        const nx = (x - minX) / rangeX * 2 - 1;
+        const ny = (y - minY) / rangeY * 2 - 1;
+        const [sx, sy] = toScreen(nx * baseScale, ny * baseScale);
+
+        const matchesSearch = searchTerm === "" || item.name.toLowerCase().includes(searchTerm) || item.short.toLowerCase().includes(searchTerm);
+        const isHovered = hoveredItem === i;
+
+        const r = (item.kind === 'theorem' || item.kind === 'lemma') ? 5 : 4;
+        const actualR = r * (isHovered ? 1.5 : 1);
+
+        ctx.globalAlpha = matchesSearch ? (isHovered ? 1 : 0.85) : 0.15;
+        ctx.fillStyle = FAMILY_COLORS[item.family] || FAMILY_COLORS.Core;
+        ctx.beginPath();
+        ctx.arc(sx, sy, actualR, 0, Math.PI * 2);
+        ctx.fill();
+
+        if (isHovered) {
+          ctx.strokeStyle = '#fff';
+          ctx.lineWidth = 2;
+          ctx.stroke();
+        }
+      }
+      ctx.globalAlpha = 1;
+    }
+
+    function onWheel(e) {
+      e.preventDefault();
+      const factor = e.deltaY > 0 ? 0.9 : 1.1;
+      scale *= factor;
+      scale = Math.max(0.1, Math.min(10, scale));
+      draw();
+    }
+
+    function onMouseDown(e) {
+      isDragging = true;
+      lastX = e.clientX;
+      lastY = e.clientY;
+    }
+
+    function onMouseMove(e) {
+      if (isDragging) {
+        offsetX += (e.clientX - lastX) / scale;
+        offsetY += (e.clientY - lastY) / scale;
+        lastX = e.clientX;
+        lastY = e.clientY;
+        draw();
+      } else {
+        // Hit test
+        const rect = canvas.getBoundingClientRect();
+        const mx = e.clientX - rect.left;
+        const my = e.clientY - rect.top;
+
+        const coords = data.coords_2d;
+        let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+        for (const [x, y] of coords) {
+          minX = Math.min(minX, x); maxX = Math.max(maxX, x);
+          minY = Math.min(minY, y); maxY = Math.max(maxY, y);
+        }
+        const rangeX = maxX - minX || 1;
+        const rangeY = maxY - minY || 1;
+        const baseScale = Math.min(canvas.width, canvas.height) * 0.4;
+
+        let found = null;
+        for (let i = 0; i < data.items.length; i++) {
+          const [x, y] = coords[i];
+          const nx = (x - minX) / rangeX * 2 - 1;
+          const ny = (y - minY) / rangeY * 2 - 1;
+          const [sx, sy] = toScreen(nx * baseScale, ny * baseScale);
+          if (Math.hypot(mx - sx, my - sy) < 10) {
+            found = i;
+            break;
+          }
+        }
+
+        if (found !== hoveredItem) {
+          hoveredItem = found;
+          draw();
+          updateInfo();
+        }
+      }
+    }
+
+    function onMouseUp() {
+      isDragging = false;
+    }
+
+    function onSearch(e) {
+      searchTerm = e.target.value.toLowerCase();
+      draw();
+    }
+
+    function updateInfo() {
+      const info = document.getElementById('info');
+      if (hoveredItem === null) {
+        info.classList.add('hidden');
+        return;
+      }
+      const item = data.items[hoveredItem];
+      info.classList.remove('hidden');
+      info.innerHTML = `
+        <div class="info-name">${item.short}</div>
+        <div class="info-detail">${item.kind} in ${item.module}</div>
+        <div class="info-detail">Family: ${item.family}</div>
+      `;
+    }
+
+    init();
+  </script>
+</body>
+</html>
