@@ -1,0 +1,2744 @@
+{
+  "meta": {
+    "count": 170,
+    "families": [
+      "AST",
+      "Parser",
+      "Eval",
+      "Validate",
+      "HomologyBridge",
+      "F2Matrix",
+      "ChainComplex",
+      "Regime",
+      "CLI",
+      "Tests",
+      "Core"
+    ]
+  },
+  "items": [
+    {
+      "name": "HeytingLean.Computational.Homology.ChainComplex.maxDim",
+      "short": "maxDim",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.ChainComplex",
+      "family": "ChainComplex"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.ChainComplex.validateShapes",
+      "short": "validateShapes",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.ChainComplex",
+      "family": "ChainComplex"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.ChainComplex.checkD2",
+      "short": "checkD2",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.ChainComplex",
+      "family": "ChainComplex"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.ChainComplex.boundaryRanks",
+      "short": "boundaryRanks",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.ChainComplex",
+      "family": "ChainComplex"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.ChainComplex.bettiAt",
+      "short": "bettiAt",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.ChainComplex",
+      "family": "ChainComplex"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.ChainComplex.bettis",
+      "short": "bettis",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.ChainComplex",
+      "family": "ChainComplex"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.ChainComplex.expectObj",
+      "short": "expectObj",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.ChainComplex",
+      "family": "ChainComplex"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.ChainComplex.getArr",
+      "short": "getArr",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.ChainComplex",
+      "family": "ChainComplex"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.ChainComplex.parseNat",
+      "short": "parseNat",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.ChainComplex",
+      "family": "ChainComplex"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.ChainComplex.parseNatArray",
+      "short": "parseNatArray",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.ChainComplex",
+      "family": "ChainComplex"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.ChainComplex.parseColOnes",
+      "short": "parseColOnes",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.ChainComplex",
+      "family": "ChainComplex"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.ChainComplex.parseJson",
+      "short": "parseJson",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.ChainComplex",
+      "family": "ChainComplex"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.ChainComplex.ChainComplexF2",
+      "short": "ChainComplexF2",
+      "kind": "structure",
+      "module": "HeytingLean.Computational.Homology.ChainComplex",
+      "family": "ChainComplex"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.F2Matrix.zero",
+      "short": "zero",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.F2Matrix",
+      "family": "F2Matrix"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.F2Matrix.ofColOnes",
+      "short": "ofColOnes",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.F2Matrix",
+      "family": "F2Matrix"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.F2Matrix.rowXor",
+      "short": "rowXor",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.F2Matrix",
+      "family": "F2Matrix"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.F2Matrix.isZero",
+      "short": "isZero",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.F2Matrix",
+      "family": "F2Matrix"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.F2Matrix.mul",
+      "short": "mul",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.F2Matrix",
+      "family": "F2Matrix"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.F2Matrix.findPivotRow",
+      "short": "findPivotRow",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.F2Matrix",
+      "family": "F2Matrix"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.F2Matrix.rank",
+      "short": "rank",
+      "kind": "def",
+      "module": "HeytingLean.Computational.Homology.F2Matrix",
+      "family": "F2Matrix"
+    },
+    {
+      "name": "HeytingLean.Computational.Homology.F2Matrix.F2Matrix",
+      "short": "F2Matrix",
+      "kind": "structure",
+      "module": "HeytingLean.Computational.Homology.F2Matrix",
+      "family": "F2Matrix"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorHomologyMain.usage",
+      "short": "usage",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorHomologyMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorHomologyMain.parseArgs",
+      "short": "parseArgs",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorHomologyMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorHomologyMain.jsonArrNat",
+      "short": "jsonArrNat",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorHomologyMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorHomologyMain.die",
+      "short": "die",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorHomologyMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorHomologyMain.demoFacts",
+      "short": "demoFacts",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorHomologyMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorHomologyMain.main",
+      "short": "main",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorHomologyMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorHomologyMain.main",
+      "short": "main",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorHomologyMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorHomologyMain.Args",
+      "short": "Args",
+      "kind": "structure",
+      "module": "HeytingLean.CLI.TensorHomologyMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.Args.stripLakeArgs",
+      "short": "stripLakeArgs",
+      "kind": "def",
+      "module": "HeytingLean.CLI.Args",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.HomologyMain.usage",
+      "short": "usage",
+      "kind": "def",
+      "module": "HeytingLean.CLI.HomologyMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.HomologyMain.parseArgs",
+      "short": "parseArgs",
+      "kind": "def",
+      "module": "HeytingLean.CLI.HomologyMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.HomologyMain.jsonArrNat",
+      "short": "jsonArrNat",
+      "kind": "def",
+      "module": "HeytingLean.CLI.HomologyMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.HomologyMain.die",
+      "short": "die",
+      "kind": "def",
+      "module": "HeytingLean.CLI.HomologyMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.HomologyMain.mkDemo",
+      "short": "mkDemo",
+      "kind": "def",
+      "module": "HeytingLean.CLI.HomologyMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.HomologyMain.main",
+      "short": "main",
+      "kind": "def",
+      "module": "HeytingLean.CLI.HomologyMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.HomologyMain.main",
+      "short": "main",
+      "kind": "def",
+      "module": "HeytingLean.CLI.HomologyMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.HomologyMain.Args",
+      "short": "Args",
+      "kind": "structure",
+      "module": "HeytingLean.CLI.HomologyMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorLogicMain.usage",
+      "short": "usage",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorLogicMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorLogicMain.parseMode",
+      "short": "parseMode",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorLogicMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorLogicMain.parseTNorm",
+      "short": "parseTNorm",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorLogicMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorLogicMain.parseArgs",
+      "short": "parseArgs",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorLogicMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorLogicMain.jsonNumOrStr",
+      "short": "jsonNumOrStr",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorLogicMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorLogicMain.atomToJson",
+      "short": "atomToJson",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorLogicMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorLogicMain.die",
+      "short": "die",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorLogicMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorLogicMain.demoAtomPat",
+      "short": "demoAtomPat",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorLogicMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorLogicMain.demoProgram",
+      "short": "demoProgram",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorLogicMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorLogicMain.demoFacts",
+      "short": "demoFacts",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorLogicMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorLogicMain.main",
+      "short": "main",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorLogicMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorLogicMain.main",
+      "short": "main",
+      "kind": "def",
+      "module": "HeytingLean.CLI.TensorLogicMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.CLI.TensorLogicMain.Args",
+      "short": "Args",
+      "kind": "structure",
+      "module": "HeytingLean.CLI.TensorLogicMain",
+      "family": "CLI"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.lookup",
+      "short": "lookup",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.bindVar",
+      "short": "bindVar",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.clamp01",
+      "short": "clamp01",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.maxF",
+      "short": "maxF",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.bit",
+      "short": "bit",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.bitToFloat",
+      "short": "bitToFloat",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.forConfig",
+      "short": "forConfig",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.empty",
+      "short": "empty",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.get",
+      "short": "get",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.addOr",
+      "short": "addOr",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.fromList",
+      "short": "fromList",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.indexByPred",
+      "short": "indexByPred",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.maxDelta",
+      "short": "maxDelta",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.unifyArg",
+      "short": "unifyArg",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.unifyArgs",
+      "short": "unifyArgs",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.unify",
+      "short": "unify",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.instantiateArg",
+      "short": "instantiateArg",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.instantiate",
+      "short": "instantiate",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.extendMatches",
+      "short": "extendMatches",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.evalBody",
+      "short": "evalBody",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.applyRule",
+      "short": "applyRule",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.step",
+      "short": "step",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.stepFromBase",
+      "short": "stepFromBase",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.run",
+      "short": "run",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.Ops",
+      "short": "Ops",
+      "kind": "structure",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.RunConfig",
+      "short": "RunConfig",
+      "kind": "structure",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.RunResult",
+      "short": "RunResult",
+      "kind": "structure",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.Mode",
+      "short": "Mode",
+      "kind": "inductive",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.TNorm",
+      "short": "TNorm",
+      "kind": "inductive",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.Subst",
+      "short": "Subst",
+      "kind": "abbrev",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Eval.Facts",
+      "short": "Facts",
+      "kind": "abbrev",
+      "module": "HeytingLean.Compiler.TensorLogic.Eval",
+      "family": "Eval"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Regime.ofString",
+      "short": "ofString",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Regime",
+      "family": "Regime"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Regime.toMode",
+      "short": "toMode",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Regime",
+      "family": "Regime"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Regime.defaultTNorm",
+      "short": "defaultTNorm",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Regime",
+      "family": "Regime"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Regime.default",
+      "short": "default",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Regime",
+      "family": "Regime"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Regime.boolean",
+      "short": "boolean",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Regime",
+      "family": "Regime"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Regime.heyting",
+      "short": "heyting",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Regime",
+      "family": "Regime"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Regime.fuzzy",
+      "short": "fuzzy",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Regime",
+      "family": "Regime"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Regime.mv",
+      "short": "mv",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Regime",
+      "family": "Regime"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Regime.toMode",
+      "short": "toMode",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Regime",
+      "family": "Regime"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Regime.toOps",
+      "short": "toOps",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Regime",
+      "family": "Regime"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Regime.defaultTempRange",
+      "short": "defaultTempRange",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Regime",
+      "family": "Regime"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Regime.sharpnessToTemp",
+      "short": "sharpnessToTemp",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Regime",
+      "family": "Regime"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Regime.toRunConfig",
+      "short": "toRunConfig",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Regime",
+      "family": "Regime"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Regime.Regime",
+      "short": "Regime",
+      "kind": "structure",
+      "module": "HeytingLean.Compiler.TensorLogic.Regime",
+      "family": "Regime"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Regime.Stage",
+      "short": "Stage",
+      "kind": "inductive",
+      "module": "HeytingLean.Compiler.TensorLogic.Regime",
+      "family": "Regime"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyEncoding.vertexName",
+      "short": "vertexName",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyEncoding",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyEncoding.edgeName",
+      "short": "edgeName",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyEncoding",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyEncoding.faceName",
+      "short": "faceName",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyEncoding",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyEncoding.simplexName",
+      "short": "simplexName",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyEncoding",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyEncoding.mkAtom",
+      "short": "mkAtom",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyEncoding",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyEncoding.mkPat",
+      "short": "mkPat",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyEncoding",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyEncoding.connectivityProgram",
+      "short": "connectivityProgram",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyEncoding",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyEncoding.edgeEndpoints",
+      "short": "edgeEndpoints",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyEncoding",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyEncoding.toLogicProgram",
+      "short": "toLogicProgram",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyEncoding",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Validate.contains",
+      "short": "contains",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Validate",
+      "family": "Validate"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Validate.checkArity",
+      "short": "checkArity",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Validate",
+      "family": "Validate"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Validate.Rule",
+      "short": "Rule",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Validate",
+      "family": "Validate"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Validate.validateRule",
+      "short": "validateRule",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Validate",
+      "family": "Validate"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.Validate.validateProgram",
+      "short": "validateProgram",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.Validate",
+      "family": "Validate"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.AST.stripQuotes",
+      "short": "stripQuotes",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.AST",
+      "family": "AST"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.AST.isVarName",
+      "short": "isVarName",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.AST",
+      "family": "AST"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.AST.ofString",
+      "short": "ofString",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.AST",
+      "family": "AST"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.AST.vars",
+      "short": "vars",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.AST",
+      "family": "AST"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.AST.consts",
+      "short": "consts",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.AST",
+      "family": "AST"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.AST.arity",
+      "short": "arity",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.AST",
+      "family": "AST"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.AST.arity",
+      "short": "arity",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.AST",
+      "family": "AST"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.AST.vars",
+      "short": "vars",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.AST",
+      "family": "AST"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.AST.consts",
+      "short": "consts",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.AST",
+      "family": "AST"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.AST.varsHead",
+      "short": "varsHead",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.AST",
+      "family": "AST"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.AST.varsBody",
+      "short": "varsBody",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.AST",
+      "family": "AST"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.AST.Atom",
+      "short": "Atom",
+      "kind": "structure",
+      "module": "HeytingLean.Compiler.TensorLogic.AST",
+      "family": "AST"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.AST.AtomPat",
+      "short": "AtomPat",
+      "kind": "structure",
+      "module": "HeytingLean.Compiler.TensorLogic.AST",
+      "family": "AST"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.AST.Rule",
+      "short": "Rule",
+      "kind": "structure",
+      "module": "HeytingLean.Compiler.TensorLogic.AST",
+      "family": "AST"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.AST.Program",
+      "short": "Program",
+      "kind": "structure",
+      "module": "HeytingLean.Compiler.TensorLogic.AST",
+      "family": "AST"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.AST.Sym",
+      "short": "Sym",
+      "kind": "inductive",
+      "module": "HeytingLean.Compiler.TensorLogic.AST",
+      "family": "AST"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.ParseFacts.parseFloatLit",
+      "short": "parseFloatLit",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.ParseFacts",
+      "family": "Parser"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.ParseFacts.parseFactLine",
+      "short": "parseFactLine",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.ParseFacts",
+      "family": "Parser"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.ParseFacts.parseFactsTSV",
+      "short": "parseFactsTSV",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.ParseFacts",
+      "family": "Parser"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts.mkEdge",
+      "short": "mkEdge",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts.pushUnique",
+      "short": "pushUnique",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts.getArg",
+      "short": "getArg",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts.arityErr",
+      "short": "arityErr",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts.mkIndexMap",
+      "short": "mkIndexMap",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts.mkEdgeIndexMap",
+      "short": "mkEdgeIndexMap",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts.lookupIndex",
+      "short": "lookupIndex",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts.chainComplexF2",
+      "short": "chainComplexF2",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts.UndirEdge",
+      "short": "UndirEdge",
+      "kind": "structure",
+      "module": "HeytingLean.Compiler.TensorLogic.HomologyFromFacts",
+      "family": "HomologyBridge"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.ParseRulesJson.expectObj",
+      "short": "expectObj",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.ParseRulesJson",
+      "family": "Parser"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.ParseRulesJson.getStr",
+      "short": "getStr",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.ParseRulesJson",
+      "family": "Parser"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.ParseRulesJson.getStrList",
+      "short": "getStrList",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.ParseRulesJson",
+      "family": "Parser"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.ParseRulesJson.getFloatOpt",
+      "short": "getFloatOpt",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.ParseRulesJson",
+      "family": "Parser"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.ParseRulesJson.parseAtomPatObj",
+      "short": "parseAtomPatObj",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.ParseRulesJson",
+      "family": "Parser"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.ParseRulesJson.parseRuleObj",
+      "short": "parseRuleObj",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.ParseRulesJson",
+      "family": "Parser"
+    },
+    {
+      "name": "HeytingLean.Compiler.TensorLogic.ParseRulesJson.parseProgramJson",
+      "short": "parseProgramJson",
+      "kind": "def",
+      "module": "HeytingLean.Compiler.TensorLogic.ParseRulesJson",
+      "family": "Parser"
+    },
+    {
+      "name": "HeytingLean.Tests.Homology.Sanity.mkDemo",
+      "short": "mkDemo",
+      "kind": "def",
+      "module": "HeytingLean.Tests.Homology.Sanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.Homology.Sanity.demoD2Ok",
+      "short": "demoD2Ok",
+      "kind": "def",
+      "module": "HeytingLean.Tests.Homology.Sanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.Homology.Sanity.demoBettis",
+      "short": "demoBettis",
+      "kind": "def",
+      "module": "HeytingLean.Tests.Homology.Sanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.Homology.SimplicialFactsSanity.bettisOf",
+      "short": "bettisOf",
+      "kind": "def",
+      "module": "HeytingLean.Tests.Homology.SimplicialFactsSanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.Homology.SimplicialFactsSanity.sphere2Facts",
+      "short": "sphere2Facts",
+      "kind": "def",
+      "module": "HeytingLean.Tests.Homology.SimplicialFactsSanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.Homology.SimplicialFactsSanity.circleFacts",
+      "short": "circleFacts",
+      "kind": "def",
+      "module": "HeytingLean.Tests.Homology.SimplicialFactsSanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.Homology.LogicEncodingSanity.mkDemo",
+      "short": "mkDemo",
+      "kind": "def",
+      "module": "HeytingLean.Tests.Homology.LogicEncodingSanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.Homology.LogicEncodingSanity.containsConnected",
+      "short": "containsConnected",
+      "kind": "def",
+      "module": "HeytingLean.Tests.Homology.LogicEncodingSanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.Homology.LogicEncodingSanity.allConnected",
+      "short": "allConnected",
+      "kind": "def",
+      "module": "HeytingLean.Tests.Homology.LogicEncodingSanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.TensorLogic.Sanity.atomPat",
+      "short": "atomPat",
+      "kind": "def",
+      "module": "HeytingLean.Tests.TensorLogic.Sanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.TensorLogic.Sanity.ruleReach1",
+      "short": "ruleReach1",
+      "kind": "def",
+      "module": "HeytingLean.Tests.TensorLogic.Sanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.TensorLogic.Sanity.ruleReach2",
+      "short": "ruleReach2",
+      "kind": "def",
+      "module": "HeytingLean.Tests.TensorLogic.Sanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.TensorLogic.Sanity.prog",
+      "short": "prog",
+      "kind": "def",
+      "module": "HeytingLean.Tests.TensorLogic.Sanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.TensorLogic.Sanity.initEdges",
+      "short": "initEdges",
+      "kind": "def",
+      "module": "HeytingLean.Tests.TensorLogic.Sanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.TensorLogic.Sanity.cfgBool",
+      "short": "cfgBool",
+      "kind": "def",
+      "module": "HeytingLean.Tests.TensorLogic.Sanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.TensorLogic.Sanity.resBool",
+      "short": "resBool",
+      "kind": "def",
+      "module": "HeytingLean.Tests.TensorLogic.Sanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.TensorLogic.Sanity.ac",
+      "short": "ac",
+      "kind": "def",
+      "module": "HeytingLean.Tests.TensorLogic.Sanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.TensorLogic.F2Sanity.atomPat",
+      "short": "atomPat",
+      "kind": "def",
+      "module": "HeytingLean.Tests.TensorLogic.F2Sanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.TensorLogic.F2Sanity.prog",
+      "short": "prog",
+      "kind": "def",
+      "module": "HeytingLean.Tests.TensorLogic.F2Sanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.TensorLogic.F2Sanity.cfgF2",
+      "short": "cfgF2",
+      "kind": "def",
+      "module": "HeytingLean.Tests.TensorLogic.F2Sanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.TensorLogic.F2Sanity.atomR",
+      "short": "atomR",
+      "kind": "def",
+      "module": "HeytingLean.Tests.TensorLogic.F2Sanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.TensorLogic.F2Sanity.runOn",
+      "short": "runOn",
+      "kind": "def",
+      "module": "HeytingLean.Tests.TensorLogic.F2Sanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.TensorLogic.F2Sanity.resCancel",
+      "short": "resCancel",
+      "kind": "def",
+      "module": "HeytingLean.Tests.TensorLogic.F2Sanity",
+      "family": "Tests"
+    },
+    {
+      "name": "HeytingLean.Tests.TensorLogic.F2Sanity.resSingle",
+      "short": "resSingle",
+      "kind": "def",
+      "module": "HeytingLean.Tests.TensorLogic.F2Sanity",
+      "family": "Tests"
+    }
+  ],
+  "coords_2d": [
+    [
+      -7.571279525756836,
+      4.053068161010742
+    ],
+    [
+      -5.5257391929626465,
+      3.6000893115997314
+    ],
+    [
+      -2.9099464416503906,
+      1.9918227195739746
+    ],
+    [
+      -1.9079132080078125,
+      1.4131778478622437
+    ],
+    [
+      -4.748720645904541,
+      2.9811947345733643
+    ],
+    [
+      -8.575896263122559,
+      4.910990238189697
+    ],
+    [
+      -2.007999897003174,
+      1.5045204162597656
+    ],
+    [
+      -1.8201904296875,
+      1.3622990846633911
+    ],
+    [
+      -8.047779083251953,
+      4.197188377380371
+    ],
+    [
+      -1.9523422718048096,
+      1.5304434299468994
+    ],
+    [
+      -8.50521469116211,
+      4.691527366638184
+    ],
+    [
+      -8.677606582641602,
+      4.917383193969727
+    ],
+    [
+      -8.606403350830078,
+      4.606533050537109
+    ],
+    [
+      -6.875273704528809,
+      4.12315034866333
+    ],
+    [
+      -4.2104172706604,
+      2.8838770389556885
+    ],
+    [
+      -8.51674747467041,
+      5.068391799926758
+    ],
+    [
+      -8.189606666564941,
+      5.097922325134277
+    ],
+    [
+      -4.157338619232178,
+      2.8306756019592285
+    ],
+    [
+      -7.253335952758789,
+      4.138382911682129
+    ],
+    [
+      -3.7637147903442383,
+      2.8438305854797363
+    ],
+    [
+      -3.66573429107666,
+      2.6553492546081543
+    ],
+    [
+      -2.5809226036071777,
+      1.798195481300354
+    ],
+    [
+      -5.1294450759887695,
+      3.4498209953308105
+    ],
+    [
+      -1.8485963344573975,
+      1.614906907081604
+    ],
+    [
+      -5.24331521987915,
+      3.614838123321533
+    ],
+    [
+      -5.394870281219482,
+      3.5601963996887207
+    ],
+    [
+      -3.167780637741089,
+      1.9991670846939087
+    ],
+    [
+      -3.0733141899108887,
+      1.998072862625122
+    ],
+    [
+      -2.229384422302246,
+      1.6441704034805298
+    ],
+    [
+      -6.740312099456787,
+      4.0337934494018555
+    ],
+    [
+      -8.59575366973877,
+      5.003175735473633
+    ],
+    [
+      -6.621520519256592,
+      3.773679494857788
+    ],
+    [
+      -3.4773337841033936,
+      2.1426403522491455
+    ],
+    [
+      -8.699640274047852,
+      4.773817539215088
+    ],
+    [
+      -6.09564733505249,
+      3.733881711959839
+    ],
+    [
+      -3.526731252670288,
+      2.210026502609253
+    ],
+    [
+      -3.5790669918060303,
+      2.270555019378662
+    ],
+    [
+      -8.390876770019531,
+      4.651684761047363
+    ],
+    [
+      -8.321187019348145,
+      5.269274711608887
+    ],
+    [
+      -7.371233940124512,
+      4.187756061553955
+    ],
+    [
+      -4.6278181076049805,
+      3.427518606185913
+    ],
+    [
+      -1.7022502422332764,
+      1.2065047025680542
+    ],
+    [
+      -1.366376519203186,
+      1.4492601156234741
+    ],
+    [
+      -1.70816171169281,
+      1.5698171854019165
+    ],
+    [
+      -4.186782360076904,
+      3.0941741466522217
+    ],
+    [
+      -3.4770848751068115,
+      2.7101991176605225
+    ],
+    [
+      -8.266403198242188,
+      4.829939365386963
+    ],
+    [
+      -7.817721366882324,
+      4.382025718688965
+    ],
+    [
+      -7.2787041664123535,
+      4.324070453643799
+    ],
+    [
+      -7.48290491104126,
+      4.3271284103393555
+    ],
+    [
+      -3.6716761589050293,
+      2.9180450439453125
+    ],
+    [
+      2.9419314861297607,
+      0.33564019203186035
+    ],
+    [
+      4.07295560836792,
+      -0.2749693691730499
+    ],
+    [
+      3.2218689918518066,
+      0.05156096816062927
+    ],
+    [
+      3.666912078857422,
+      0.32924705743789673
+    ],
+    [
+      0.2067829966545105,
+      1.1927844285964966
+    ],
+    [
+      -0.14793328940868378,
+      1.397949457168579
+    ],
+    [
+      2.1424312591552734,
+      0.6278894543647766
+    ],
+    [
+      3.529472589492798,
+      0.057701289653778076
+    ],
+    [
+      3.809257745742798,
+      -0.14714092016220093
+    ],
+    [
+      5.010679721832275,
+      -1.1395782232284546
+    ],
+    [
+      3.697587728500366,
+      -0.09127165377140045
+    ],
+    [
+      5.322514533996582,
+      -1.2536427974700928
+    ],
+    [
+      3.2666361331939697,
+      0.19707956910133362
+    ],
+    [
+      0.3507835566997528,
+      1.1691596508026123
+    ],
+    [
+      4.966048717498779,
+      -0.9234046339988708
+    ],
+    [
+      4.518237590789795,
+      -0.6633593440055847
+    ],
+    [
+      0.4313949942588806,
+      1.2889878749847412
+    ],
+    [
+      5.512570858001709,
+      -1.2189525365829468
+    ],
+    [
+      5.75292444229126,
+      -1.529016375541687
+    ],
+    [
+      5.183435440063477,
+      -1.0346629619598389
+    ],
+    [
+      4.275088310241699,
+      -0.42222777009010315
+    ],
+    [
+      5.924189567565918,
+      -1.9406096935272217
+    ],
+    [
+      6.0286173820495605,
+      -1.9013566970825195
+    ],
+    [
+      0.667011559009552,
+      1.3412578105926514
+    ],
+    [
+      5.58666467666626,
+      -1.7451233863830566
+    ],
+    [
+      0.25893399119377136,
+      1.2139400243759155
+    ],
+    [
+      5.060760498046875,
+      -1.2238566875457764
+    ],
+    [
+      5.834738731384277,
+      -1.933971881866455
+    ],
+    [
+      0.7115954756736755,
+      1.3058438301086426
+    ],
+    [
+      3.595292568206787,
+      0.154340922832489
+    ],
+    [
+      5.507943153381348,
+      -1.6843228340148926
+    ],
+    [
+      6.001665115356445,
+      -1.8181297779083252
+    ],
+    [
+      3.911726474761963,
+      0.11072062700986862
+    ],
+    [
+      3.3915812969207764,
+      0.06715475022792816
+    ],
+    [
+      3.457568407058716,
+      0.2611190974712372
+    ],
+    [
+      0.3200523555278778,
+      1.5247864723205566
+    ],
+    [
+      4.3049092292785645,
+      -0.2056775689125061
+    ],
+    [
+      0.6767649054527283,
+      1.1825019121170044
+    ],
+    [
+      5.905624866485596,
+      -1.8262501955032349
+    ],
+    [
+      3.9508564472198486,
+      0.04591759294271469
+    ],
+    [
+      3.7417678833007812,
+      0.31679683923721313
+    ],
+    [
+      5.789202690124512,
+      -1.3632283210754395
+    ],
+    [
+      5.109243869781494,
+      -1.0331209897994995
+    ],
+    [
+      5.974656105041504,
+      -1.8540759086608887
+    ],
+    [
+      0.5969539284706116,
+      1.4577797651290894
+    ],
+    [
+      0.4864911437034607,
+      1.4660956859588623
+    ],
+    [
+      1.0095593929290771,
+      1.1573870182037354
+    ],
+    [
+      5.244612216949463,
+      -1.1201908588409424
+    ],
+    [
+      0.7349766492843628,
+      1.0204863548278809
+    ],
+    [
+      1.6588913202285767,
+      0.8556028604507446
+    ],
+    [
+      0.4618241488933563,
+      1.400438666343689
+    ],
+    [
+      5.8648481369018555,
+      -1.5361690521240234
+    ],
+    [
+      6.0236897468566895,
+      -1.653141736984253
+    ],
+    [
+      5.4177985191345215,
+      -1.2127104997634888
+    ],
+    [
+      6.230928897857666,
+      -1.631934642791748
+    ],
+    [
+      -1.6444026231765747,
+      1.2196294069290161
+    ],
+    [
+      -8.849089622497559,
+      4.816448211669922
+    ],
+    [
+      -1.8180006742477417,
+      1.4947272539138794
+    ],
+    [
+      -5.166280269622803,
+      3.462977886199951
+    ],
+    [
+      -5.772416591644287,
+      3.4686124324798584
+    ],
+    [
+      -7.940289497375488,
+      5.1914381980896
+    ],
+    [
+      -3.45559024810791,
+      3.071948766708374
+    ],
+    [
+      -3.484790802001953,
+      3.404151201248169
+    ],
+    [
+      -7.499142646789551,
+      4.70026159286499
+    ],
+    [
+      -3.551408290863037,
+      3.06502628326416
+    ],
+    [
+      -7.418545246124268,
+      4.641223430633545
+    ],
+    [
+      -7.4643402099609375,
+      4.8358683586120605
+    ],
+    [
+      -7.543281555175781,
+      4.774839401245117
+    ],
+    [
+      -3.6474177837371826,
+      3.3002750873565674
+    ],
+    [
+      -7.808115482330322,
+      5.143383502960205
+    ],
+    [
+      -4.006892681121826,
+      3.339320421218872
+    ],
+    [
+      -3.4653868675231934,
+      3.1292569637298584
+    ],
+    [
+      -7.303526401519775,
+      4.576674461364746
+    ],
+    [
+      -3.775115489959717,
+      3.3991105556488037
+    ],
+    [
+      -6.972545623779297,
+      4.407920837402344
+    ],
+    [
+      -7.003636360168457,
+      4.404552459716797
+    ],
+    [
+      -2.5528242588043213,
+      1.7554646730422974
+    ],
+    [
+      -8.275256156921387,
+      4.470057964324951
+    ],
+    [
+      -2.830449104309082,
+      1.9931509494781494
+    ],
+    [
+      -1.3053693771362305,
+      1.368931770324707
+    ],
+    [
+      -3.791038751602173,
+      3.240997314453125
+    ],
+    [
+      -1.3943098783493042,
+      1.1132830381393433
+    ],
+    [
+      -3.866792917251587,
+      3.0486669540405273
+    ],
+    [
+      -7.709152698516846,
+      5.122910022735596
+    ],
+    [
+      -4.36940336227417,
+      3.4785101413726807
+    ],
+    [
+      -7.817428112030029,
+      4.954502582550049
+    ],
+    [
+      -6.032400608062744,
+      4.1281232833862305
+    ],
+    [
+      -1.2817730903625488,
+      1.36224365234375
+    ],
+    [
+      -3.887617588043213,
+      2.2669568061828613
+    ],
+    [
+      -5.328996658325195,
+      3.430879592895508
+    ],
+    [
+      -5.087901592254639,
+      3.227612257003784
+    ],
+    [
+      -5.203241348266602,
+      3.2511792182922363
+    ],
+    [
+      -5.6071295738220215,
+      3.5063436031341553
+    ],
+    [
+      -8.434346199035645,
+      4.655781269073486
+    ],
+    [
+      -4.680253982543945,
+      2.8468756675720215
+    ],
+    [
+      -0.6993615031242371,
+      1.3820923566818237
+    ],
+    [
+      -0.9566666483879089,
+      1.2610323429107666
+    ],
+    [
+      -0.9200842976570129,
+      1.1072832345962524
+    ],
+    [
+      -3.3617372512817383,
+      2.3065130710601807
+    ],
+    [
+      -5.393293380737305,
+      3.1626458168029785
+    ],
+    [
+      -3.3302624225616455,
+      1.948120355606079
+    ],
+    [
+      6.133915424346924,
+      -1.9965237379074097
+    ],
+    [
+      5.185634136199951,
+      -0.855820894241333
+    ],
+    [
+      3.6875855922698975,
+      0.12745949625968933
+    ],
+    [
+      -7.003342628479004,
+      4.4735236167907715
+    ],
+    [
+      -8.135393142700195,
+      5.540841579437256
+    ],
+    [
+      -4.045411586761475,
+      3.3475706577301025
+    ],
+    [
+      -8.14968204498291,
+      5.340195178985596
+    ],
+    [
+      -4.086767673492432,
+      3.4778761863708496
+    ],
+    [
+      -1.1547127962112427,
+      1.295910120010376
+    ],
+    [
+      -3.858339786529541,
+      3.392446756362915
+    ],
+    [
+      -6.625495910644531,
+      4.328091144561768
+    ],
+    [
+      3.994473934173584,
+      -0.31663835048675537
+    ],
+    [
+      4.820634365081787,
+      -0.8216357827186584
+    ],
+    [
+      4.729344367980957,
+      -0.719961941242218
+    ],
+    [
+      3.3492319583892822,
+      0.31127044558525085
+    ],
+    [
+      0.35325825214385986,
+      1.5715370178222656
+    ],
+    [
+      6.07550573348999,
+      -1.9482041597366333
+    ],
+    [
+      5.324010848999023,
+      -0.8313205242156982
+    ]
+  ],
+  "coords_3d": [
+    [
+      -3.8135554790496826,
+      10.006858825683594,
+      -1.5055395364761353
+    ],
+    [
+      -1.9122788906097412,
+      10.129136085510254,
+      -0.4400203227996826
+    ],
+    [
+      0.6919232606887817,
+      9.713839530944824,
+      0.8284651637077332
+    ],
+    [
+      1.5892497301101685,
+      9.333622932434082,
+      1.3278958797454834
+    ],
+    [
+      -0.9558413624763489,
+      9.879033088684082,
+      -0.05139916390180588
+    ],
+    [
+      -4.949390411376953,
+      10.454895973205566,
+      -1.9522528648376465
+    ],
+    [
+      1.5054969787597656,
+      9.102581024169922,
+      1.1999702453613281
+    ],
+    [
+      1.796209692955017,
+      9.358854293823242,
+      1.2890338897705078
+    ],
+    [
+      -4.1817193031311035,
+      10.086580276489258,
+      -1.651858925819397
+    ],
+    [
+      1.5584653615951538,
+      9.23884105682373,
+      1.2933146953582764
+    ],
+    [
+      -4.942366600036621,
+      10.41909122467041,
+      -2.0058863162994385
+    ],
+    [
+      -4.823214530944824,
+      10.379876136779785,
+      -1.9715887308120728
+    ],
+    [
+      -4.725212097167969,
+      10.239046096801758,
+      -1.8546561002731323
+    ],
+    [
+      -3.148742198944092,
+      10.279587745666504,
+      -1.225796103477478
+    ],
+    [
+      -0.7836880087852478,
+      9.458454132080078,
+      0.308361291885376
+    ],
+    [
+      -4.8981032371521,
+      10.770208358764648,
+      -1.8541887998580933
+    ],
+    [
+      -4.754587650299072,
+      10.652118682861328,
+      -1.7065314054489136
+    ],
+    [
+      -0.6279809474945068,
+      9.59968376159668,
+      0.18008749186992645
+    ],
+    [
+      -3.4665396213531494,
+      10.29102897644043,
+      -1.6362721920013428
+    ],
+    [
+      -0.4607160687446594,
+      9.486045837402344,
+      0.3096742630004883
+    ],
+    [
+      -0.10200866311788559,
+      9.287099838256836,
+      0.6513108015060425
+    ],
+    [
+      0.959551215171814,
+      9.471845626831055,
+      0.9214714765548706
+    ],
+    [
+      -1.4566683769226074,
+      9.929206848144531,
+      -0.2186109870672226
+    ],
+    [
+      1.7266943454742432,
+      9.354360580444336,
+      1.159402847290039
+    ],
+    [
+      -1.5721254348754883,
+      10.060328483581543,
+      -0.34695005416870117
+    ],
+    [
+      -1.7053672075271606,
+      9.974648475646973,
+      -0.49304795265197754
+    ],
+    [
+      0.5134791135787964,
+      9.641762733459473,
+      0.6675559282302856
+    ],
+    [
+      0.5460193753242493,
+      9.592464447021484,
+      0.5847947597503662
+    ],
+    [
+      1.1975269317626953,
+      9.478199005126953,
+      0.9854636192321777
+    ],
+    [
+      -3.494861364364624,
+      10.081369400024414,
+      -1.362341046333313
+    ],
+    [
+      -4.96126651763916,
+      10.579882621765137,
+      -2.0091066360473633
+    ],
+    [
+      -2.9747884273529053,
+      10.000332832336426,
+      -1.0708619356155396
+    ],
+    [
+      0.03450419381260872,
+      9.757843017578125,
+      0.4672408699989319
+    ],
+    [
+      -4.815897464752197,
+      10.536617279052734,
+      -2.0785810947418213
+    ],
+    [
+      -2.474958658218384,
+      10.10739517211914,
+      -0.7893201112747192
+    ],
+    [
+      0.24075689911842346,
+      9.624021530151367,
+      0.400317519903183
+    ],
+    [
+      -0.06892258673906326,
+      9.663374900817871,
+      0.5942163467407227
+    ],
+    [
+      -4.866969108581543,
+      10.338593482971191,
+      -1.7938591241836548
+    ],
+    [
+      -4.733443260192871,
+      10.87578010559082,
+      -2.072779417037964
+    ],
+    [
+      -3.515056610107422,
+      10.202786445617676,
+      -1.7642310857772827
+    ],
+    [
+      -1.3268508911132812,
+      9.537949562072754,
+      -0.013029446825385094
+    ],
+    [
+      1.6334307193756104,
+      9.209966659545898,
+      1.4853637218475342
+    ],
+    [
+      1.850767970085144,
+      8.913887977600098,
+      1.3805664777755737
+    ],
+    [
+      1.8915401697158813,
+      9.14902114868164,
+      1.4860063791275024
+    ],
+    [
+      -0.7628307938575745,
+      9.240479469299316,
+      0.19066134095191956
+    ],
+    [
+      -0.18663564324378967,
+      9.354940414428711,
+      0.5350759625434875
+    ],
+    [
+      -4.655029296875,
+      10.609577178955078,
+      -1.879679799079895
+    ],
+    [
+      -4.034205913543701,
+      10.474373817443848,
+      -1.6505212783813477
+    ],
+    [
+      -3.4746627807617188,
+      10.349605560302734,
+      -1.4293642044067383
+    ],
+    [
+      -3.5485775470733643,
+      10.551353454589844,
+      -1.4400218725204468
+    ],
+    [
+      -0.36561450362205505,
+      9.178030967712402,
+      0.2724335491657257
+    ],
+    [
+      3.6837241649627686,
+      7.242965221405029,
+      5.345370769500732
+    ],
+    [
+      4.055479049682617,
+      6.845470428466797,
+      6.439050197601318
+    ],
+    [
+      3.906873941421509,
+      7.064014911651611,
+      5.616057395935059
+    ],
+    [
+      4.094604969024658,
+      7.023619174957275,
+      6.014312267303467
+    ],
+    [
+      2.6945459842681885,
+      8.571552276611328,
+      2.431504726409912
+    ],
+    [
+      2.6317334175109863,
+      8.44366455078125,
+      2.2338013648986816
+    ],
+    [
+      3.517429828643799,
+      7.429457664489746,
+      4.781721591949463
+    ],
+    [
+      3.9398081302642822,
+      6.830291748046875,
+      5.930808067321777
+    ],
+    [
+      3.9257588386535645,
+      7.0422539710998535,
+      6.304883003234863
+    ],
+    [
+      4.267017364501953,
+      6.591648101806641,
+      7.848468780517578
+    ],
+    [
+      4.0269389152526855,
+      6.975143909454346,
+      6.1430745124816895
+    ],
+    [
+      4.39932918548584,
+      6.359618663787842,
+      7.911493301391602
+    ],
+    [
+      3.713268995285034,
+      6.951765537261963,
+      5.779055118560791
+    ],
+    [
+      2.8110151290893555,
+      8.363177299499512,
+      2.666846990585327
+    ],
+    [
+      4.540182113647461,
+      6.513253211975098,
+      7.408695697784424
+    ],
+    [
+      4.222723484039307,
+      6.659017562866211,
+      7.045960426330566
+    ],
+    [
+      3.0390872955322266,
+      8.407791137695312,
+      2.493373155593872
+    ],
+    [
+      4.304129600524902,
+      6.422764778137207,
+      7.991224765777588
+    ],
+    [
+      4.4311113357543945,
+      5.997488975524902,
+      8.405401229858398
+    ],
+    [
+      4.20770788192749,
+      6.3763837814331055,
+      7.576093673706055
+    ],
+    [
+      4.220289707183838,
+      6.769853115081787,
+      6.562202453613281
+    ],
+    [
+      4.491320610046387,
+      5.839656352996826,
+      8.69463062286377
+    ],
+    [
+      4.592419624328613,
+      5.880558967590332,
+      8.63676929473877
+    ],
+    [
+      3.009115695953369,
+      8.543405532836914,
+      2.4677469730377197
+    ],
+    [
+      4.195950031280518,
+      6.141113758087158,
+      8.357268333435059
+    ],
+    [
+      2.9550321102142334,
+      8.5022611618042,
+      2.483513593673706
+    ],
+    [
+      4.5637054443359375,
+      6.43714714050293,
+      7.664768218994141
+    ],
+    [
+      4.123441696166992,
+      5.890024662017822,
+      8.70693302154541
+    ],
+    [
+      3.119762659072876,
+      8.301468849182129,
+      2.899895429611206
+    ],
+    [
+      3.7739291191101074,
+      6.921243667602539,
+      6.036412239074707
+    ],
+    [
+      4.325210094451904,
+      5.971430778503418,
+      8.19883918762207
+    ],
+    [
+      4.4731879234313965,
+      5.600846767425537,
+      8.511799812316895
+    ],
+    [
+      4.045609951019287,
+      6.882568359375,
+      6.338746070861816
+    ],
+    [
+      3.831308364868164,
+      7.1037726402282715,
+      5.7650556564331055
+    ],
+    [
+      3.7467153072357178,
+      7.236082553863525,
+      6.023794174194336
+    ],
+    [
+      2.8359313011169434,
+      8.292572975158691,
+      2.628572940826416
+    ],
+    [
+      4.168143272399902,
+      6.926006317138672,
+      6.67513370513916
+    ],
+    [
+      2.9945263862609863,
+      8.200007438659668,
+      2.9328479766845703
+    ],
+    [
+      4.264867305755615,
+      5.785964012145996,
+      8.554800033569336
+    ],
+    [
+      4.138372421264648,
+      6.740952968597412,
+      6.243122577667236
+    ],
+    [
+      3.7746763229370117,
+      6.994990825653076,
+      5.990623474121094
+    ],
+    [
+      4.6124467849731445,
+      6.133808135986328,
+      8.130437850952148
+    ],
+    [
+      4.425856590270996,
+      6.486331939697266,
+      7.584623336791992
+    ],
+    [
+      4.32727575302124,
+      5.717224597930908,
+      8.630180358886719
+    ],
+    [
+      3.105624198913574,
+      8.477563858032227,
+      2.641592502593994
+    ],
+    [
+      3.0791313648223877,
+      8.372314453125,
+      2.8565454483032227
+    ],
+    [
+      3.181720018386841,
+      8.108198165893555,
+      3.2727103233337402
+    ],
+    [
+      4.418952465057373,
+      6.250826835632324,
+      7.731930732727051
+    ],
+    [
+      3.059595823287964,
+      8.032037734985352,
+      2.893068313598633
+    ],
+    [
+      3.4132988452911377,
+      7.625509262084961,
+      4.380562782287598
+    ],
+    [
+      3.0642175674438477,
+      8.504729270935059,
+      2.6661343574523926
+    ],
+    [
+      4.375011920928955,
+      6.04425048828125,
+      8.375861167907715
+    ],
+    [
+      4.384356498718262,
+      5.808661460876465,
+      8.60567569732666
+    ],
+    [
+      4.490050792694092,
+      6.378498554229736,
+      7.927982330322266
+    ],
+    [
+      4.257651329040527,
+      5.925106525421143,
+      8.528736114501953
+    ],
+    [
+      1.727465271949768,
+      9.104785919189453,
+      1.4118361473083496
+    ],
+    [
+      -4.935563564300537,
+      10.336735725402832,
+      -1.8983875513076782
+    ],
+    [
+      1.98849356174469,
+      9.266709327697754,
+      1.2301768064498901
+    ],
+    [
+      -1.3837863206863403,
+      9.84185791015625,
+      -0.1432281881570816
+    ],
+    [
+      -1.9612971544265747,
+      10.134807586669922,
+      -0.5426657199859619
+    ],
+    [
+      -4.359132289886475,
+      10.983226776123047,
+      -1.7420421838760376
+    ],
+    [
+      -0.24863103032112122,
+      8.982619285583496,
+      0.4288994073867798
+    ],
+    [
+      -0.5247122645378113,
+      9.010394096374512,
+      0.6309528350830078
+    ],
+    [
+      -3.8025920391082764,
+      10.77037525177002,
+      -1.794944405555725
+    ],
+    [
+      -0.5295273661613464,
+      8.993663787841797,
+      0.624504804611206
+    ],
+    [
+      -3.821967601776123,
+      10.716391563415527,
+      -1.382912278175354
+    ],
+    [
+      -3.6201562881469727,
+      10.7332124710083,
+      -1.7056694030761719
+    ],
+    [
+      -3.8297324180603027,
+      10.696900367736816,
+      -1.681973934173584
+    ],
+    [
+      -0.3780941367149353,
+      8.884902000427246,
+      0.6577301025390625
+    ],
+    [
+      -4.317947864532471,
+      11.012667655944824,
+      -1.7266910076141357
+    ],
+    [
+      -0.832533597946167,
+      8.998334884643555,
+      0.2147642821073532
+    ],
+    [
+      -0.3587433397769928,
+      8.875251770019531,
+      0.44182005524635315
+    ],
+    [
+      -3.555447816848755,
+      10.68017292022705,
+      -1.668297529220581
+    ],
+    [
+      -0.6679334044456482,
+      8.87810230255127,
+      0.2881103456020355
+    ],
+    [
+      -3.345287561416626,
+      10.662684440612793,
+      -1.5859341621398926
+    ],
+    [
+      -3.28985333442688,
+      10.518131256103516,
+      -1.5650601387023926
+    ],
+    [
+      1.0500435829162598,
+      9.270224571228027,
+      1.0900517702102661
+    ],
+    [
+      -4.417148113250732,
+      10.162339210510254,
+      -1.8579463958740234
+    ],
+    [
+      0.7382432818412781,
+      9.366495132446289,
+      0.7643269300460815
+    ],
+    [
+      2.0978739261627197,
+      9.204723358154297,
+      1.4599214792251587
+    ],
+    [
+      -0.6924833059310913,
+      8.948037147521973,
+      0.31990891695022583
+    ],
+    [
+      2.0581727027893066,
+      8.912670135498047,
+      1.621838927268982
+    ],
+    [
+      -0.7050104737281799,
+      9.10776138305664,
+      0.5135816931724548
+    ],
+    [
+      -4.183330535888672,
+      10.800284385681152,
+      -1.7550013065338135
+    ],
+    [
+      -1.1164236068725586,
+      9.082810401916504,
+      0.1823756992816925
+    ],
+    [
+      -4.135775089263916,
+      10.877365112304688,
+      -1.870098352432251
+    ],
+    [
+      -2.118769645690918,
+      9.709176063537598,
+      -0.3211692273616791
+    ],
+    [
+      2.0089333057403564,
+      8.931745529174805,
+      1.618768572807312
+    ],
+    [
+      -0.11313040554523468,
+      9.747688293457031,
+      0.3621010184288025
+    ],
+    [
+      -1.780778408050537,
+      9.94851016998291,
+      -0.45967260003089905
+    ],
+    [
+      -1.4672596454620361,
+      9.919981002807617,
+      -0.24659664928913116
+    ],
+    [
+      -1.7284023761749268,
+      9.853687286376953,
+      -0.26415327191352844
+    ],
+    [
+      -1.756674885749817,
+      10.08342456817627,
+      -0.533782958984375
+    ],
+    [
+      -4.992718696594238,
+      10.05871868133545,
+      -2.0797650814056396
+    ],
+    [
+      -0.9637957215309143,
+      10.013778686523438,
+      0.08285851031541824
+    ],
+    [
+      2.356534004211426,
+      8.751667976379395,
+      1.9981215000152588
+    ],
+    [
+      2.2550504207611084,
+      8.864774703979492,
+      1.8560590744018555
+    ],
+    [
+      2.4664437770843506,
+      8.76346492767334,
+      1.9510339498519897
+    ],
+    [
+      0.05196740850806236,
+      9.716611862182617,
+      0.6069874167442322
+    ],
+    [
+      -1.7398784160614014,
+      9.99976634979248,
+      -0.12635581195354462
+    ],
+    [
+      0.38635459542274475,
+      9.520758628845215,
+      0.6877154111862183
+    ],
+    [
+      4.58099365234375,
+      5.859949111938477,
+      8.890707015991211
+    ],
+    [
+      4.424624919891357,
+      6.663475036621094,
+      7.6593241691589355
+    ],
+    [
+      3.8392326831817627,
+      6.785693168640137,
+      5.760461330413818
+    ],
+    [
+      -3.2742061614990234,
+      10.424077033996582,
+      -1.406137466430664
+    ],
+    [
+      -4.620602607727051,
+      11.096781730651855,
+      -1.8936636447906494
+    ],
+    [
+      -0.868415117263794,
+      9.007654190063477,
+      0.4809756278991699
+    ],
+    [
+      -4.467291831970215,
+      11.131869316101074,
+      -2.015172004699707
+    ],
+    [
+      -1.0468214750289917,
+      9.2134370803833,
+      0.333964079618454
+    ],
+    [
+      2.125450372695923,
+      8.993729591369629,
+      1.6952991485595703
+    ],
+    [
+      -0.798560380935669,
+      8.935976028442383,
+      0.4111500382423401
+    ],
+    [
+      -3.1364879608154297,
+      10.609909057617188,
+      -1.2423447370529175
+    ],
+    [
+      3.9646127223968506,
+      6.9531636238098145,
+      6.580796718597412
+    ],
+    [
+      4.447625160217285,
+      6.590042591094971,
+      7.301816463470459
+    ],
+    [
+      4.399581432342529,
+      6.799463272094727,
+      7.195120334625244
+    ],
+    [
+      3.582374334335327,
+      6.930212020874023,
+      5.648563385009766
+    ],
+    [
+      2.7545926570892334,
+      8.22176742553711,
+      2.588157892227173
+    ],
+    [
+      4.474715709686279,
+      5.749297618865967,
+      8.656155586242676
+    ],
+    [
+      4.687989234924316,
+      6.469360828399658,
+      7.78399133682251
+    ]
+  ]
+}

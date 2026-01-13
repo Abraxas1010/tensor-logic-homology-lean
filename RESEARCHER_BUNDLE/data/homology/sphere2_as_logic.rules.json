@@ -1,0 +1,45 @@
+[
+  {
+    "head": "adjacent",
+    "args": ["V1", "V2"],
+    "body": [{"pred": "edge", "args": ["V1", "V2"]}]
+  },
+  {
+    "head": "adjacent",
+    "args": ["V1", "V2"],
+    "body": [{"pred": "edge", "args": ["V2", "V1"]}]
+  },
+  {
+    "head": "connected",
+    "args": ["V", "V"],
+    "body": [{"pred": "vertex", "args": ["V"]}]
+  },
+  {
+    "head": "connected",
+    "args": ["V1", "V2"],
+    "body": [{"pred": "adjacent", "args": ["V1", "V2"]}]
+  },
+  {
+    "head": "connected",
+    "args": ["V1", "V3"],
+    "body": [
+      {"pred": "adjacent", "args": ["V1", "V2"]},
+      {"pred": "connected", "args": ["V2", "V3"]}
+    ]
+  },
+  {
+    "head": "edge_in_face",
+    "args": ["V1", "V2", "F"],
+    "body": [{"pred": "face_edge", "args": ["F", "V1", "V2"]}]
+  },
+  {
+    "head": "edge_in_face",
+    "args": ["V1", "V2", "F"],
+    "body": [{"pred": "face_edge", "args": ["F", "V2", "V1"]}]
+  },
+  {
+    "head": "coboundary",
+    "args": ["V1", "V2", "F"],
+    "body": [{"pred": "edge_in_face", "args": ["V1", "V2", "F"]}]
+  }
+]

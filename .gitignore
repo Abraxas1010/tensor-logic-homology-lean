@@ -1,0 +1,13 @@
+# Lake build artifacts
+.lake/
+build/
+lake-packages/
+
+# Editor
+.vscode/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db

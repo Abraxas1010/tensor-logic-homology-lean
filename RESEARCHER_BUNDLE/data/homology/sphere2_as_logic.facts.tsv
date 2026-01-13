@@ -1,0 +1,34 @@
+# Sphere S² = boundary of tetrahedron
+# 4 vertices, 6 edges, 4 faces
+
+# Vertices (0-simplices)
+vertex	v0
+vertex	v1
+vertex	v2
+vertex	v3
+
+# Edges (1-simplices): edge(v1, v2) - undirected, represented once
+edge	v0	v1
+edge	v0	v2
+edge	v0	v3
+edge	v1	v2
+edge	v1	v3
+edge	v2	v3
+
+# Face-edge incidence: face_edge(face_id, edge_v1, edge_v2)
+# Face 012 has edges 01, 02, 12
+face_edge	f012	v0	v1
+face_edge	f012	v0	v2
+face_edge	f012	v1	v2
+# Face 013 has edges 01, 03, 13
+face_edge	f013	v0	v1
+face_edge	f013	v0	v3
+face_edge	f013	v1	v3
+# Face 023 has edges 02, 03, 23
+face_edge	f023	v0	v2
+face_edge	f023	v0	v3
+face_edge	f023	v2	v3
+# Face 123 has edges 12, 13, 23
+face_edge	f123	v1	v2
+face_edge	f123	v1	v3
+face_edge	f123	v2	v3
