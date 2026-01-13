@@ -18,6 +18,102 @@
 
 Part of the broader HeytingLean formal verification project: https://apoth3osis.io
 
+## From Proof to Production: The Curry-Howard Pipeline
+
+<p align="center">
+  <em>
+    <strong>Lean → Theorem → C Backend → Tensor Graph → PyTorch → Physics-Informed Neural Nets</strong>
+  </em>
+</p>
+
+This project demonstrates a complete pipeline from formal specification to executable computation:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                           THE CURRY-HOWARD PIPELINE                              │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                  │
+│  1. LEAN SPECIFICATION     →   Type-checked logic programs + homology           │
+│       ↓                        (AST, Rules, Eval, ChainComplex)                  │
+│                                                                                  │
+│  2. PROOF = PROGRAM        →   Curry-Howard: proofs ARE programs                 │
+│       ↓                        lake build compiles to native C                   │
+│                                                                                  │
+│  3. TENSOR GRAPH IR        →   Backend-neutral JSON representation               │
+│       ↓                        (predicates, facts, rules, semantics)             │
+│                                                                                  │
+│  4. PYTORCH EXECUTOR       →   Dense tensor fixpoint iteration                   │
+│       ↓                        (supports autodiff for learning)                  │
+│                                                                                  │
+│  5. APPLICATIONS           →   Physics-Informed Neural Networks                  │
+│                                Differentiable topology, verified TDA             │
+│                                                                                  │
+└─────────────────────────────────────────────────────────────────────────────────┘
+```
+
+### What This Enables
+
+**The Promise:** Model your system in Lean, prove correctness properties, and then compile to efficient tensor operations that can be executed in PyTorch with autodiff support.
+
+**The Reality:** The bridge from formal proof to production ML isn't trivial. This project shows how to build that bridge:
+
+| Stage | What It Does | Tool |
+|-------|-------------|------|
+| **Specification** | Define logic programs + semantics | `AST.lean`, `Eval.lean` |
+| **Verification** | Prove properties (∂² = 0, β computation) | Lean type system |
+| **Compilation** | Lean → C backend | `lake build` |
+| **Export** | Rules → tensor graph IR (JSON) | `tensor_logic_export_graph` |
+| **Execution** | IR → dense tensor fixpoint | `run_tensor_graph.py` |
+| **Learning** | Autodiff through logical inference | PyTorch gradients |
+
+### Applications to Physics-Informed Neural Nets (PINNs)
+
+The tensor graph IR enables a crucial capability: **differentiable logical inference**.
+
+**Why this matters for PINNs:**
+
+1. **Constraint Encoding**: Express physical laws (conservation, boundary conditions) as logical rules
+2. **Gradient Flow**: Autodiff through the logical fixpoint to learn parameters that satisfy constraints
+3. **Verified Structure**: The Lean specification guarantees the constraint structure is correct
+4. **Topology-Aware**: F₂ mode enables homological constraints (Betti numbers, cycles, boundaries)
+
+**Example: Constraint Satisfaction as Inference**
+
+```python
+# Load the tensor graph IR (exported from Lean)
+graph = load_tensor_graph("constraints.tensorgraph.json")
+
+# Run differentiable fixpoint with PyTorch
+result = run_fixpoint(graph, device="cuda")
+
+# Loss = how well constraints are satisfied
+loss = 1.0 - result["tensors"]["satisfied"].mean()
+
+# Gradient descent to find parameters that satisfy constraints
+loss.backward()
+optimizer.step()
+```
+
+### Demo: From Lean to PyTorch
+
+```bash
+# 1. Verify in Lean (type-checking = correctness proof)
+cd RESEARCHER_BUNDLE && lake build --wfail
+
+# 2. Export tensor graph IR
+lake exe tensor_logic_export_graph \
+  --rules data/homology/sphere2_as_logic.rules.json \
+  --facts data/homology/sphere2_as_logic.facts.tsv \
+  --mode fuzzy --out reachability.tensorgraph.json
+
+# 3. Execute in PyTorch
+python3 scripts/run_tensor_graph.py \
+  --graph reachability.tensorgraph.json \
+  --pred connected
+```
+
+---
+
 ## TL;DR
 
 - **What:** Machine-checked tensor logic compiler + F₂ homology computation in Lean 4
@@ -213,16 +309,23 @@ tensor-logic-homology-lean/
     ├── lean-toolchain
     ├── scripts/
     │   ├── verify_tensor_logic.sh
-    │   └── generate_umap_previews.py
+    │   ├── generate_umap_previews.py
+    │   └── run_tensor_graph.py   # PyTorch reference executor
     ├── data/homology/
     │   ├── sphere2_as_logic.facts.tsv
     │   ├── sphere2_as_logic.rules.json
     │   └── sphere2_tetrahedron_boundary.json
-    ├── artifacts/visuals/
-    │   ├── tensor_logic_2d_preview.svg
-    │   ├── tensor_logic_3d_preview.svg
-    │   ├── tensor_logic_3d_preview_animated.svg
-    │   └── tensor_logic_proofs.json
+    ├── artifacts/
+    │   ├── visuals/
+    │   │   ├── tensor_logic_2d_preview.svg
+    │   │   ├── tensor_logic_3d_preview.svg
+    │   │   ├── tensor_logic_3d_preview_animated.svg
+    │   │   ├── tensor_logic_2d.html          # Interactive 2D viewer
+    │   │   ├── tensor_logic_3d.html          # Interactive 3D viewer
+    │   │   └── tensor_logic_proofs.json
+    │   └── tensor_graph/
+    │       ├── reachability.tensorgraph.json         # Sample IR output
+    │       └── reachability_weighted.tensorgraph.json
     └── HeytingLean/
         ├── Compiler/TensorLogic/
         │   ├── AST.lean
@@ -230,6 +333,7 @@ tensor-logic-homology-lean/
         │   ├── ParseRulesJson.lean
         │   ├── Validate.lean
         │   ├── Eval.lean
+        │   ├── ExportGraph.lean              # Tensor graph IR exporter
         │   ├── HomologyEncoding.lean
         │   ├── HomologyFromFacts.lean
         │   └── Regime.lean
@@ -238,12 +342,59 @@ tensor-logic-homology-lean/
         │   └── ChainComplex.lean
         ├── CLI/
         │   ├── TensorLogicMain.lean
+        │   ├── TensorLogicExportGraphMain.lean  # Export graph CLI
         │   ├── TensorHomologyMain.lean
         │   └── HomologyMain.lean
         └── Tests/
             ├── TensorLogic/{Sanity,F2Sanity,AllSanity}.lean
             └── Homology/{Sanity,LogicEncodingSanity,AllSanity}.lean
 ```
+
+## Tensor Graph IR Format
+
+The `tensor_logic_export_graph` CLI exports a backend-neutral JSON representation of logic programs:
+
+```json
+{
+  "format": "heytinglean.tensorlogic.tensorgraph",
+  "version": 1,
+  "semantics": {
+    "mode": "fuzzy",
+    "tnorm": "product",
+    "and_kind": "mul",
+    "or_kind": "noisy_or",
+    "fixpoint": { "kind": "anchored_step_from_base", "max_iter": 50, "eps": 1e-6 }
+  },
+  "domain": { "size": 3, "symbols": ["a", "b", "c"] },
+  "predicates": [
+    { "id": 0, "name": "edge", "arity": 2, "roles": ["extensional"] },
+    { "id": 1, "name": "reachable", "arity": 2, "roles": ["extensional", "intensional"] }
+  ],
+  "facts": [
+    { "pred": "edge", "args": ["a", "b"], "weight": 1.0, "q16": 65536 }
+  ],
+  "rules": [
+    { "head": {...}, "body": [...], "vars": ["X", "Y"], "elim_vars": [] }
+  ]
+}
+```
+
+### PyTorch Reference Executor
+
+The included `run_tensor_graph.py` loads this IR and executes fixpoint iteration using dense tensors:
+
+```bash
+python3 scripts/run_tensor_graph.py \
+  --graph artifacts/tensor_graph/reachability.tensorgraph.json \
+  --pred reachable \
+  --device cpu
+```
+
+Features:
+- Supports all semantic modes (boolean, fuzzy, F₂/XOR, Heyting)
+- Implements noisy-or, Łukasiewicz, product t-norms
+- Autodiff-compatible (PyTorch tensors)
+- Outputs derived facts with convergence metadata
 
 ## Input Formats
 

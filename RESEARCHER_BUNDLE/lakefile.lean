@@ -17,6 +17,7 @@ lean_lib HeytingLean where
     `HeytingLean.Compiler.TensorLogic.ParseRulesJson,
     `HeytingLean.Compiler.TensorLogic.Validate,
     `HeytingLean.Compiler.TensorLogic.Eval,
+    `HeytingLean.Compiler.TensorLogic.ExportGraph,
     `HeytingLean.Compiler.TensorLogic.HomologyEncoding,
     `HeytingLean.Compiler.TensorLogic.HomologyFromFacts,
     `HeytingLean.Computational.Homology.F2Matrix,
@@ -33,3 +34,6 @@ lean_exe tensor_homology_cli where
 
 lean_exe homology_cli where
   root := `HeytingLean.CLI.HomologyMain
+
+lean_exe tensor_logic_export_graph where
+  root := `HeytingLean.CLI.TensorLogicExportGraphMain

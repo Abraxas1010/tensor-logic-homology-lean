@@ -1,0 +1,42 @@
+{"version": 1,
+ "truth_values":
+ {"q16": {"scale": 65536, "kind": "q16.16"}, "float": {"kind": "float"}},
+ "semantics":
+ {"tnorm": "product",
+  "sharpness": 1,
+  "or_kind": "noisy_or",
+  "mode": "fuzzy",
+  "fixpoint":
+  {"max_iter": 50, "kind": "anchored_step_from_base", "eps": 0.000001},
+  "and_kind": "mul"},
+ "rules":
+ [{"weight": 1,
+   "vars": ["X", "Y"],
+   "head": {"pred": "reachable", "args": [{"var": "X"}, {"var": "Y"}]},
+   "elim_vars": [],
+   "body": [{"pred": "edge", "args": [{"var": "X"}, {"var": "Y"}]}]},
+  {"weight": 1,
+   "vars": ["X", "Y", "Z"],
+   "head": {"pred": "reachable", "args": [{"var": "X"}, {"var": "Z"}]},
+   "elim_vars": ["Y"],
+   "body":
+   [{"pred": "edge", "args": [{"var": "X"}, {"var": "Y"}]},
+    {"pred": "reachable", "args": [{"var": "Y"}, {"var": "Z"}]}]}],
+ "predicates":
+ [{"roles": ["extensional"], "name": "edge", "id": 0, "arity": 2},
+  {"roles": ["intensional"], "name": "reachable", "id": 1, "arity": 2}],
+ "format": "heytinglean.tensorlogic.tensorgraph",
+ "facts":
+ [{"weight": 1,
+   "q16": 65536,
+   "pred_id": 0,
+   "pred": "edge",
+   "args": ["a", "b"],
+   "arg_ids": [0, 1]},
+  {"weight": 1,
+   "q16": 65536,
+   "pred_id": 0,
+   "pred": "edge",
+   "args": ["b", "c"],
+   "arg_ids": [1, 2]}],
+ "domain": {"symbols": ["a", "b", "c"], "size": 3}}
