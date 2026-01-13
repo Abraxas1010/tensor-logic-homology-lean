@@ -1,0 +1,15 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.03s
+     Running unittests src/lib.rs (target/debug/deps/heyting_tt0_verifier-f32a8197389e3077)
+
+running 2 tests
+test tests::verifier_accepts_minimal_beta_certificate ... ok
+test tests::verifier_accepts_minimal_bundle_dir ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests heyting_tt0_verifier
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

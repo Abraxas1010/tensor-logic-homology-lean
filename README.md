@@ -304,23 +304,24 @@ tensor-logic-homology-lean/
 ├── docs/                         # PNG thumbnails
 │   ├── tensor_logic_2d_thumb.png
 │   └── tensor_logic_3d_thumb.png
-└── RESEARCHER_BUNDLE/            # Self-contained verification
-    ├── lakefile.lean
-    ├── lean-toolchain
-    ├── scripts/
-    │   ├── verify_tensor_logic.sh
-    │   ├── generate_umap_previews.py
-    │   └── run_tensor_graph.py   # PyTorch reference executor
-    ├── data/homology/
-    │   ├── sphere2_as_logic.facts.tsv
-    │   ├── sphere2_as_logic.rules.json
-    │   └── sphere2_tetrahedron_boundary.json
-    ├── artifacts/
-    │   ├── visuals/
-    │   │   ├── tensor_logic_2d_preview.svg
-    │   │   ├── tensor_logic_3d_preview.svg
-    │   │   ├── tensor_logic_3d_preview_animated.svg
-    │   │   ├── tensor_logic_2d.html          # Interactive 2D viewer
+	└── RESEARCHER_BUNDLE/            # Self-contained verification
+	    ├── lakefile.lean
+	    ├── lean-toolchain
+	    ├── scripts/
+	    │   ├── verify_tensor_logic.sh
+	    │   ├── generate_umap_previews.py
+	    │   └── run_tensor_graph.py   # PyTorch reference executor
+	    ├── data/homology/
+	    │   ├── sphere2_as_logic.facts.tsv
+	    │   ├── sphere2_as_logic.rules.json
+	    │   └── sphere2_tetrahedron_boundary.json
+	    ├── artifacts/
+	    │   ├── cab_kernel_bundle_v1/           # CAB-certified bundle (C ABI kernel + verifier + tensor graphs)
+	    │   ├── visuals/
+	    │   │   ├── tensor_logic_2d_preview.svg
+	    │   │   ├── tensor_logic_3d_preview.svg
+	    │   │   ├── tensor_logic_3d_preview_animated.svg
+	    │   │   ├── tensor_logic_2d.html          # Interactive 2D viewer
     │   │   ├── tensor_logic_3d.html          # Interactive 3D viewer
     │   │   └── tensor_logic_proofs.json
     │   └── tensor_graph/
@@ -390,11 +391,30 @@ python3 scripts/run_tensor_graph.py \
   --device cpu
 ```
 
-Features:
-- Supports all semantic modes (boolean, fuzzy, F₂/XOR, Heyting)
-- Implements noisy-or, Łukasiewicz, product t-norms
-- Autodiff-compatible (PyTorch tensors)
-- Outputs derived facts with convergence metadata
+	Features:
+	- Supports all semantic modes (boolean, fuzzy, F₂/XOR, Heyting)
+	- Implements noisy-or, Łukasiewicz, product t-norms
+	- Autodiff-compatible (PyTorch tensors)
+	- Optional training: learns rule/fact weights (`--train --trainable rules|facts|both`)
+	- Optional checkpointing: safetensors `--checkpoint-in/out` with `spec_hash` compatibility check
+	- Outputs derived facts with convergence metadata
+
+	Training example (inside `RESEARCHER_BUNDLE/`):
+
+	```bash
+	cat > labels.json <<'EOF'
+	[
+	  {"pred": "reachable", "args": ["a","c"], "target": 1.0}
+	]
+	EOF
+
+	# Requires: pip install torch safetensors
+	python3 scripts/run_tensor_graph.py \
+	  --graph artifacts/tensor_graph/reachability_weighted.tensorgraph.json \
+	  --train --trainable facts --labels labels.json --epochs 50 --lr 0.5 \
+	  --checkpoint-out trained.safetensors \
+	  --pred reachable
+	```
 
 ## Input Formats
 

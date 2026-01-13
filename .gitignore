@@ -8,6 +8,16 @@ lake-packages/
 *.swp
 *~
 
+# Python
+__pycache__/
+*.pyc
+
 # OS
 .DS_Store
 Thumbs.db
+
+# Large static libraries (keep .so for demo)
+*.a
+
+# Checkpoints (user-generated)
+*.safetensors
